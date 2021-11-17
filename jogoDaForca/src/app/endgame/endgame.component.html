@@ -1,0 +1,10 @@
+<article class="gameOver" *ngIf="gameOverIndicator">
+  <h1>No attempts remaining... Game Over!</h1>
+  <p>The word was: <span class="boldWeigth">{{wordDisplay}}</span></p>
+  <button mat-stroked-button (click)="callResetForm()" color="warn">Try again</button>
+</article>
+
+<article class="playerWins" *ngIf="winIndicator">
+  <h1>Congratulations!!! You win!!!</h1>
+  <button mat-stroked-button (click)="callResetForm()" color="warn">Try again</button>
+</article>
