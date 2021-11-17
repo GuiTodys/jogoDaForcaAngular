@@ -1,0 +1,24 @@
+.gameOver{
+  width: 300px;
+  height: auto;
+  margin: auto;
+  border-radius: 3px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.playerWins{
+  width: 350px;
+  height: auto;
+  margin: auto;
+  border-radius: 3px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.boldWeigth{
+  font-weight: bold;
+  text-transform: uppercase;
+}
