@@ -1,0 +1,7 @@
+<form (submit)="okHandler($event,letterImput)">
+<mat-form-field>
+  <mat-label>Insert a letter</mat-label>
+  <input matInput type="text" name="letter-input" placeholder="Digite uma letra" maxlength="1" required autofocus #letterImput>
+</mat-form-field>
+<button type="submit" mat-raised-button color="primary">OK</button>
+</form>
