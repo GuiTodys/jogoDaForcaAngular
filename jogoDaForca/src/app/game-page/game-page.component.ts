@@ -41,6 +41,7 @@ export class GamePageComponent implements OnInit {
 
     gameOver:boolean = false
     playerWins:boolean = false
+    stopRunning:boolean = false
 
   constructor() {}
 
@@ -60,9 +61,7 @@ export class GamePageComponent implements OnInit {
 
   tratarLetraEntrada(letra:string){
 
-    if(this.remainingAttempts<=0){
-      this.gameOver = true
-      this.escondida = this.choosenWord
+    if(this.stopRunning){
       return
     }
 
@@ -71,6 +70,13 @@ export class GamePageComponent implements OnInit {
     this.escondidaArray = [...this.escondida]
 
     this.replaceRightLetter()
+
+    if(this.remainingAttempts<=0){
+      this.stopRunning = true
+      this.gameOver = true
+      this.escondida = this.choosenWord
+      return
+    }
 
   }
 
@@ -105,5 +111,6 @@ export class GamePageComponent implements OnInit {
     this.gameOver = false
     this.playerWins = false
     this.remainingAttempts = 5
+    this.stopRunning = false
   }
 }
