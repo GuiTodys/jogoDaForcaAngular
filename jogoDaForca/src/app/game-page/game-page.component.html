@@ -1,0 +1,5 @@
+<div class="container">
+<app-hidden-word [word]="choosenWord" [description]="chosenDescription" [palavraEscondida]="escondida" [tentativas]="remainingAttempts"></app-hidden-word>
+<app-letter-input (inputLetter)="tratarLetraEntrada($event)"></app-letter-input>
+<app-endgame (resetForm)="resetGame()" [winIndicator]="playerWins" [gameOverIndicator]="gameOver" [wordDisplay]="choosenWord"></app-endgame>
+</div>
